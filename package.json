@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "shery": "vite"
-  },
+  "start": "vite",
+  "build": "vite build",
+  "serve": "vite preview"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
