@@ -16,25 +16,45 @@
 <body>
     <div class="main box-border">
         <navbar class="fixed top-0 z-10 w-full drop-shadow-[0_2px_2px_rgba(0,0,0,0.2)]">
-            <div class="nav  flex content-center justify-between py-6 px-20 bg-white font-semibold">
+            <div class="nav flex content-center justify-between py-6 px-20 bg-white font-semibold max-lg:hidden">
                 <div class="left text-3xl">
-                    <h1>Nailed.</h1>
+                    <a href="#">Nailed.</a>
                 </div>
                 <div class="mid flex py-2 space-x-12">
-                    <h2 class="text-xl">About us</h2>
-                    <h2 class="text-xl">Partners</h2>
-                    <h2 class="text-xl">Portfolio</h2>
-                    <h2 class="text-xl">FAQ</h2>
+                    <a href="#" class="text-xl">About us</a>
+                    <a href="#" class="text-xl">Partners</a>
+                    <a href="#" class="text-xl">Portfolio</a>
+                    <a href="#" class="text-xl">FAQ</a>
                 </div>
                 <div class="right flex justify-center content-center space-x-12">
                     <h2 class="text-xl py-2">Log in</h2>
                     <h2 class="text-xl bg-black text-white px-6 py-2 border-solid border-black rounded-full">Sign up</h2>
                 </div>
             </div>
+            <div class="nav-mini hidden py-6 px-20 bg-white font-semibold h-96 max-lg:hidden">
+                <div class="nav-mini-part1 flex content-center justify-between">
+                    <div class="left text-3xl">
+                        <a href="#">Nailed.</a>
+                    </div>
+                    <i class="ri-close-line text-2xl " onclick="handleMenu()"></i>
+                </div>
+                <div class="nav-mini-part2 flex-col justify-end">
+                    <div class="mid py-4">
+                        <a href="#" class="text-xl block py-2 border-y-2 hover:text-slate-300">About us</a>
+                        <a href="#" class="text-xl block py-2 border-b-2 hover:text-slate-300">Partners</a>
+                        <a href="#" class="text-xl block py-2 border-b-2 hover:text-slate-300">Portfolio</a>
+                        <a href="#" class="text-xl block py-2 border-b-2 hover:text-slate-300">FAQ</a>
+                    </div>
+                    <div class="right flex justify-around py-6 content-center space-x-12 ">
+                        <h2 class="text-xl py-2">Log in</h2>
+                        <h2 class="text-xl bg-black text-white px-6 py-2 border-solid border-black rounded-full">Sign up</h2>
+                    </div>
+                </div>
+            </div>
         </navbar>
-        <div class="part1 flex font-black">
-            <div class="left h-screen w-4/5">
-                <div class="heading-title p-20 pb-8 pt-28 font-bold text-8xl">
+        <div class="part1 flex font-black max-lg:flex-col">
+            <div class="left h-full w-4/5 max-lg:w-full">
+                <div class="heading-title p-20 pb-8 pt-28 font-bold text-8xl max-2xl:text-6xl">
                     The Art and Science 
                     <br>
                     <div class="mid-line flex items-center gap-4">
@@ -56,7 +76,7 @@
                 <div class="heading-description pl-20 font-normal">
                     Transforming ideas into stellar designs requires a dynamic blend <br>of creativity, technical expertise, and user-focused thinking
                 </div> 
-                <div class="discover-btn p-20 pt-8">
+                <div class="discover-btn px-20 py-8">
                     <h1 class="font-normal text-center text-xl w-40 p-4 bg-black text-white rounded-full">
                         Discover
                     </h1>
@@ -112,48 +132,52 @@
                     </div>
                 </div>              
             </div>
-            <div class="star absolute right-[340px] bottom-20">
-                <i class="ri-star-fill text-[55px]"></i>
-            </div>
-            <div class="5-by-5-grid scale-[0.3] absolute right-[-130px] bottom-[-320px] mix-blend-multiply opacity-40">
-                <img src="https://i2.wp.com/etc.usf.edu/clipart/42600/42669/grid_42669_lg.gif" alt="">
-            </div>
             
-            <div class="right h-screen w-2/5 bg-[#f6f6f6]">
-                <div class="box absolute top-[260px] right-48 h-[500px] w-[310px] rounded-full overflow-clip drop-shadow-[0_40px_40px_rgba(0,0,0,0.5)]">
+            
+            <div class="right h-screen w-2/5 bg-[#f6f6f6] max-lg:w-full relative">
+                <div class="star absolute right-[340px] bottom-20 max-lg:right-52 bottom-80">
+                    <i class="ri-star-fill text-[55px]"></i>
+                </div>
+                <div class="5-by-5-grid scale-[0.3] absolute right-[-130px] top-[200px] mix-blend-multiply opacity-40 max-lg:top-0">
+                    <img src="https://i2.wp.com/etc.usf.edu/clipart/42600/42669/grid_42669_lg.gif" alt="">
+                </div>
+                <div class="box absolute top-[260px] right-48 h-[500px] w-[310px] rounded-full overflow-clip drop-shadow-[0_40px_40px_rgba(0,0,0,0.5)] max-lg:top-24">
                     <img class="scale-[2.5] absolute bottom-[150px]"  src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                 </div>
-                <div class="star absolute right-[370px] top-[80px] text-yellow-300 font-medium text-[420px]">
+                <div class="star absolute right-[370px] top-[80px] text-yellow-300 font-medium text-[420px] max-lg: right-20">
                     *
                 </div>
-                <div class="our-team-btn absolute bottom-[300px] right-[270px] h-12 w-40 p-1 items-center justify-between px-2 flex bg-yellow-300 rounded-full">
+                <div class="our-team-btn absolute bottom-[300px] right-[270px] h-12 w-40 p-1 items-center justify-between px-2 flex bg-yellow-300 rounded-full max-lg:top-96">
                     <i class="ri-play-fill text-white py-1.5 px-2.5 bg-gray-800 rounded-full"></i>
                     <h2 class="pr-6">Our Team</h2>
                 </div>
+                <div class="testimonials-box absolute h-[250px] w-[280px] right-[470px] bottom-[100px] bg-gradient-to-br from-slate-600 to-slate-900 rounded-2xl p-6 max-lg:right-96 bottom-40">
+                    <h2 class="text-white pb-4 font-semibold">TESTIMONIALS</h2>
+                    <div class="part-1">
+                        <div class="mb-1 text-s text-white font-medium">UX Decisions</div>
+                    <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                    <div class="bg-blue-400 h-2.5 rounded-full" style="width: 90%"></div>
+                    </div>
+                    </div>
+                    <div class="part-2">
+                        <div class="mb-1 text-s text-white font-medium">Buisness Projects</div>
+                    <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                    <div class="bg-yellow-200 h-2.5 rounded-full" style="width: 60%"></div>
+                    </div>
+                    </div>
+                    <div class="part-3">
+                        <div class="mb-1 text-s text-white font-medium">Innovative Solutions</div>
+                    <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
+                    <div class="bg-blue-100 h-2.5 rounded-full" style="width: 30%"></div>
+                    </div>
+                    </div>
+                </div>
                 
             </div>
-            <div class="testimonials-box absolute h-[250px] w-[280px] right-[470px] bottom-[100px] bg-gradient-to-br from-slate-600 to-slate-900 rounded-2xl p-6">
-                <h2 class="text-white pb-4 font-semibold">TESTIMONIALS</h2>
-                <div class="part-1">
-                    <div class="mb-1 text-s text-white font-medium">UX Decisions</div>
-                <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
-                <div class="bg-blue-400 h-2.5 rounded-full" style="width: 90%"></div>
-                </div>
-                </div>
-                <div class="part-2">
-                    <div class="mb-1 text-s text-white font-medium">Buisness Projects</div>
-                <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
-                <div class="bg-yellow-200 h-2.5 rounded-full" style="width: 60%"></div>
-                </div>
-                </div>
-                <div class="part-3">
-                    <div class="mb-1 text-s text-white font-medium">Innovative Solutions</div>
-                <div class="w-full bg-gray-700 rounded-full h-2.5 mb-4">
-                <div class="bg-blue-100 h-2.5 rounded-full" style="width: 30%"></div>
-                </div>
-                </div>
-            </div>
+            
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
